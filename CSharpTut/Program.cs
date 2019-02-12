@@ -14,6 +14,12 @@ namespace CSharpTut
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             Console.WriteLine("Hello World!");
             Console.WriteLine($"This is the current time {DateTime.Now}");
+
+            for (int i=0; i < args.Length; i++)
+            {
+                Console.WriteLine($"Arg {i} is: {args[i]}");
+            }
+           
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
