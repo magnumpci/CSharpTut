@@ -19,10 +19,25 @@ namespace CSharpTut
             {
                 Console.WriteLine($"Arg {i} is: {args[i]}");
             }
-           
+
+
+            string[] myArgs = Environment.GetCommandLineArgs();
+
+            Console.WriteLine(string.Join(", ", myArgs));
+
+            SayHello();
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        }
+
+        private static void SayHello()
+        {
+            string name = "";
+            Console.Write("What is your name: ");
+            name = Console.ReadLine();
+            Console.WriteLine("Hello " + name);
         }
     }
 }
